@@ -4,9 +4,10 @@ import jm.task.core.jdbc.service.UserService;
 import jm.task.core.jdbc.service.UserServiceImpl;
 
 public class Main {
-    private final static UserService userServise = new UserServiceImpl();
+//    private final static UserService userServise = new UserServiceImpl();
 
     public static void main(String[] args) {
+        UserService userServise = new UserServiceImpl();
         userServise.createUsersTable();
 
         userServise.saveUser("Nissan", "370Z", (byte) 14);
@@ -16,9 +17,9 @@ public class Main {
         userServise.saveUser("BMW", "X5", (byte) 23);
         userServise.saveUser("Mercedes", "C200", (byte) 30);
 
-        userServise.removeUserById(2);
+//        userServise.removeUserById(2);
         userServise.getAllUsers();
-        userServise.cleanUsersTable();
-        userServise.dropUsersTable();
+//        userServise.cleanUsersTable();
+//        userServise.dropUsersTable();
     }
 }
